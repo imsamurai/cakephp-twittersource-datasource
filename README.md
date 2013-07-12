@@ -1,7 +1,7 @@
 TwitterSource Plugin
 =====================
 
-CakePHP TwitterSource Plugin with DataSource for Twitter API
+CakePHP TwitterSource Plugin with DataSource for [Twitter API](https://dev.twitter.com/)
 
 ## WARNING
 
