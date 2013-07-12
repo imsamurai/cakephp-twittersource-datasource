@@ -45,7 +45,7 @@ public $twitter = array(
 
 Then make model
 
-:: Freebase.php ::
+:: Twitter.php ::
 public $useDbConfig = 'twitter';
 public $useTable = '<desired endpoint, for ex: "statuses/mentions_timeline">';
 
