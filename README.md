@@ -35,6 +35,12 @@ public $twitter = array(
   'datasource' => 'TwitterSource.Http/TwitterSource',
         'host' => 'api.twitter.com/1.1',
         'port' => 443
+        'auth' => array(
+		'name' => 'oauth',
+		'version' => '1.0',
+		'oauth_consumer_key' => 'xxx',
+		'oauth_consumer_secret' => 'xxx'
+	)
 );
 
 Then make model
