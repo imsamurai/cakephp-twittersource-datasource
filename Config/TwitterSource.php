@@ -559,7 +559,24 @@ $Config
 									return $_result;
 								}))
 		)
-
+/*
+		 * Returns an HTTP 200 OK response code and a representation of the requesting user if authentication was successful;
+ *		 * returns a 401 status code and an error message if not. Use this method to test if supplied user credentials are valid.
+		 *
+		 * @link https://dev.twitter.com/docs/api/1.1/get/account/verify_credentials
+		 */
+		->add(
+				$CF->endpoint()
+				->id(26)
+				->methodRead()
+				->table('account/verify_credentials')
+				->path('account/verify_credentials.json')
+				->addCondition($CF->condition()->name('include_entities'))
+				->addCondition($CF->condition()->name('skip_status'))
+				->result($CF->result()->map(function($result) {
+									return array($result);
+								}))
+		)
 		/*
 		 * Returns the current rate limits for methods belonging to the specified resource families.
 		 *

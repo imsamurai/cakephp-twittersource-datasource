@@ -483,4 +483,16 @@ class TwitterTest extends CakeTestCase {
 		debug($result);
 		$this->assertNotSame(false, $result);
 	}
+
+	public function test_account_verify_credentials() {
+		$this->_loadModel();
+		$this->Twitter->setSource('account/verify_credentials');
+		$this->Twitter->setCredentials(Configure::read('TwitterSourceTest.credentials'));
+		$params = array(
+		);
+
+		$result = $this->Twitter->find('first', $params);
+		debug($result);
+		$this->assertNotSame(false, $result);
+	}
 }
